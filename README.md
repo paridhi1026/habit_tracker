@@ -1,6 +1,6 @@
 # Habit Tracker Desktop Application
 
-A beginner-friendly Java Swing desktop app for tracking daily and weekly habits with SQLite persistence.
+A Java Swing desktop app for tracking daily and weekly habits with SQLite persistence.
 
 ## Project Structure
 
@@ -55,29 +55,9 @@ Tables:
 - `Habit(id, user_id, name, frequency)`
 - `HabitLog(id, habit_id, date, status)`
 
-## How to Run
 
-1. Install JDK 17 or newer.
-2. Download SQLite JDBC from Maven Central:
-   `https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/`
-3. Place the jar file in the `lib` folder.
-   Example: `lib/sqlite-jdbc-3.45.3.0.jar`
-4. From this folder, run:
 
-```powershell
-.\run.ps1
-```
 
-The script compiles all Java files into `out` and starts the app.
-
-## Manual Compile and Run
-
-```powershell
-javac -cp "lib/*" -d out (Get-ChildItem -Recurse src/main/java/*.java).FullName
-java -cp "out;lib/*" com.habittracker.Main
-```
-
-## Code Walkthrough
 
 - `Main.java` initializes the database and opens the login screen.
 - `Database.java` creates the SQLite tables if they do not exist.
